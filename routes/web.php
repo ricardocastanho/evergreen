@@ -21,6 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::get('/student', 'StudentController@index')->name('student.home');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/student/login', 'Auth\LoginStudentController@index')->name('student.login');
+Route::post('/student/login', 'Auth\LoginStudentController@login')->name('student.login.submit');

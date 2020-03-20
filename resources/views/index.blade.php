@@ -3,7 +3,6 @@
     <title>Evergreen</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
 <div class="container">
     <main role="main">
         <div class="jumbotron bg-light border border-secondary">
@@ -32,5 +31,6 @@
         </div>
     </main>
 </div>
+<script src="{{asset('js/app.js')}}" type="text/javascript"></script>
 </body>
 </html>

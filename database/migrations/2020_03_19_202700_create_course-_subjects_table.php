@@ -19,7 +19,6 @@ class CreateCourseSubjectsTable extends Migration
             $table->integer('subject_id')->unsigned();
             $table->foreign('subject_id')->references('id')->on('subjects');
             $table->timestamps();
-            $table->primary(['course_id', 'subject_id']);
         });
     }
 

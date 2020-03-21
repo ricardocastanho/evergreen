@@ -5,7 +5,7 @@
         <main role="main">
             <div class="card border">
                 <div class="card-body">
-                    <h5 class="card-title">Alunos</h5>
+                    <h5 class="card-title">Acadêmicos</h5>
                     <table class="table table-ordered table-hover">
                         <thead>
                         <tr>
@@ -22,7 +22,11 @@
                                 <td>{{$s->id}}</td>
                                 <td>{{$s->name}}</td>
                                 <td>{{$s->email}}</td>
-                                <td>{{$s->course_id}}</td>
+                                @foreach($courses as $c)
+                                    @if($c->id == $s->course_id)
+                                        <td>{{$c->name}}</td>
+                                    @endif
+                                @endforeach
                                 <td>
                                     <a href="/produtos/editar/{{$s->id}}" class="btn btn-sm btn-primary">Editar</a>
                                     <a href="/produtos/apagar/{{$s->id}}" class="btn btn-sm btn-danger">Apagar</a>

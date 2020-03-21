@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Student;
+use App\Course;
 
 class HomeController extends Controller
 {
@@ -29,6 +30,7 @@ class HomeController extends Controller
     public function students()
     {
         $students = Student::all();
-        return view('students_list', compact('students'));
+        $courses = Course::all();
+        return view('students_list', compact('students', 'courses'));
     }
 }

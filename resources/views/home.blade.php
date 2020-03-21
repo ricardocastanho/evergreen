@@ -19,8 +19,8 @@
                                 <p class="card-text">
                                     Acadêmicos EAD, Acadêmicos Presencial
                                 </p>
-                                <a href="{{ route('register') }}" class="btn btn-primary">Acadêmicos</a>
-                                <a href="{{ route('register') }}" class="btn btn-primary">Matricular</a>
+                                <a href="{{ route('students.list') }}" class="btn btn-primary">Acadêmicos</a>
+                                <a href="{{ route('register') }}" class="btn btn-dark">Matricular</a>
                             </div>
                         </div>
                         <div class="card border border-primary">
@@ -30,7 +30,7 @@
                                     Professores
                                 </p>
                                 <a href="{{ route('register') }}" class="btn btn-primary">Professores</a>
-                                <a href="{{ route('register') }}" class="btn btn-primary">Cadastrar</a>
+                                <a href="{{ route('register') }}" class="btn btn-dark">Cadastrar</a>
                             </div>
                         </div>
                 </div>

@@ -14,7 +14,7 @@
                             <p class="card-text">
                                 Acadêmicos EAD, Acadêmicos Presencial
                             </p>
-                            <a href="{{route('student.login')}}" class="btn btn-primary">Clique aqui!</a>
+                            <a href="{{route('student.login')}}" class="btn btn-primary">Entrar</a>
                         </div>
                     </div>
                     <div class="card border border-primary">
@@ -23,7 +23,7 @@
                             <p class="card-text">
                                 Professores
                             </p>
-                            <a href="{{route('teacher.login')}}" class="btn btn-primary">Clique aqui!</a>
+                            <a href="{{route('teacher.login')}}" class="btn btn-primary">Entrar</a>
                         </div>
                     </div>
                 </div>

@@ -27,7 +27,6 @@ class RedirectIfAuthenticated
                 return redirect()->route('student.home');
             }
         }
-
         return $next($request);
     }
 }

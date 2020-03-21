@@ -27,7 +27,7 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    public function students()
+    public function showstudents()
     {
         $students = Student::all();
         $courses = Course::all();

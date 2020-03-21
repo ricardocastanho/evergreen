@@ -13,17 +13,17 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <div class="card border border-primary">
+                        <div class="card border">
                             <div class="card-body">
                                 <h5 class="card-title">Acadêmicos</h5>
                                 <p class="card-text">
                                     Acadêmicos EAD, Acadêmicos Presencial
                                 </p>
-                                <a href="{{ route('students.list') }}" class="btn btn-primary">Acadêmicos</a>
-                                <a href="{{ route('register') }}" class="btn btn-dark">Matricular</a>
+                                <a href="{{ route('adm.students.list') }}" class="btn btn-primary">Acadêmicos</a>
+                                <a href="{{ route('register') }}" class="btn btn-dark">Cadastrar</a>
                             </div>
                         </div>
-                        <div class="card border border-primary">
+                        <div class="card border">
                             <div class="card-body">
                                 <h5 class="card-title">Colaboradores</h5>
                                 <p class="card-text">

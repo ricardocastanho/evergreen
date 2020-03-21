@@ -29,7 +29,7 @@
                                 @endforeach
                                 <td>
                                     <a href="/produtos/editar/{{$s->id}}" class="btn btn-sm btn-primary">Editar</a>
-                                    <a href="/produtos/apagar/{{$s->id}}" class="btn btn-sm btn-danger">Apagar</a>
+                                    <a href="/home/students/destroy/{{$s->id}}" class="btn btn-sm btn-danger">Apagar</a>
                                 </td>
                             </tr>
                         @endforeach
@@ -38,7 +38,7 @@
                 </div>
                 <div>
                     <div class="card-footer">
-                        <a href="/produtos/create" class="btn btn-sm btn-primary">Novo Produtos</a>
+                        <a href="{{ route('register') }}" class="btn btn-sm btn-primary">Cadastrar novo Aluno</a>
                     </div>
                 </div>
             </div>

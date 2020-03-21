@@ -23,7 +23,7 @@
                             <p class="card-text">
                                 Professores
                             </p>
-                            <a href="/categorias/create" class="btn btn-primary">Clique aqui!</a>
+                            <a href="{{route('teacher.login')}}" class="btn btn-primary">Clique aqui!</a>
                         </div>
                     </div>
                 </div>

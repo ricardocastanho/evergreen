@@ -28,7 +28,7 @@
                                     @endif
                                 @endforeach
                                 <td>
-                                    <a href="/produtos/editar/{{$s->id}}" class="btn btn-sm btn-primary">Editar</a>
+                                    <a href="/home/students/edit/{{$s->id}}" class="btn btn-sm btn-primary">Editar</a>
                                     <a href="/home/students/destroy/{{$s->id}}" class="btn btn-sm btn-danger">Apagar</a>
                                 </td>
                             </tr>

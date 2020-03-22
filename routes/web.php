@@ -22,12 +22,13 @@ Auth::routes();
 Route::get('home', 'HomeController@index')->name('home');
 Route::get('/home/students', 'HomeController@showstudents')->name('adm.students.list');
 Route::get('/home/students/destroy/{id}', 'Auth\DestroyController@destroystudent');
+Route::get('/home/students/edit/{id}', 'Auth\EditController@editstudent');
+Route::post('/home/students/{id}', 'Auth\EditController@updatestudent')->name('updatestudent');
 
 Route::get('/student', 'StudentController@index')->name('student.home');
-Route::get('/teacher', 'TeacherController@index')->name('teacher.home');
-
 Route::get('/student/login', 'Auth\LoginStudentController@index')->name('student.login');
 Route::post('/student/login', 'Auth\LoginStudentController@login')->name('student.login.submit');
 
+Route::get('/teacher', 'TeacherController@index')->name('teacher.home');
 Route::get('/teacher/login', 'Auth\LoginTeacherController@index')->name('teacher.login');
 Route::post('/teacher/login', 'Auth\LoginTeacherController@login')->name('teacher.login.submit');

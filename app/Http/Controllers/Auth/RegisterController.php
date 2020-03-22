@@ -70,7 +70,7 @@ class RegisterController extends Controller
         return Student::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'course' => $data['course'],
+            'course_id' => $data['course_id'],
             'password' => Hash::make($data['password']),
         ]);
     }

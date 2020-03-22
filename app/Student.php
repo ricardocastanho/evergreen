@@ -11,9 +11,9 @@ class Student extends Authenticatable
 {
     use Notifiable;
 
-    /*public function course(){
+    public function course(){
         return $this->belongsTo('App\Course');
-    }*/
+    }
 
     protected $guard = 'student';
 

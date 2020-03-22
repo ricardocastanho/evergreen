@@ -29,7 +29,7 @@
                                 <p class="card-text">
                                     Professores
                                 </p>
-                                <a href="{{ route('register') }}" class="btn btn-primary">Professores</a>
+                                <a href="{{ route('adm.teachers.list') }}" class="btn btn-primary">Professores</a>
                                 <a href="{{ route('register') }}" class="btn btn-dark">Cadastrar</a>
                             </div>
                         </div>

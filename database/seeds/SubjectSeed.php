@@ -11,8 +11,9 @@ class SubjectSeed extends Seeder
      */
     public function run()
     {
-        DB::table('subjects')->insert(['name'=>'Topicos Emergentes', 'teacher_id'=>1]);
+        DB::table('subjects')->insert(['name'=>'Topicos Emergentes', 'teacher_id'=>2]);
         DB::table('subjects')->insert(['name'=>'Auditoria e Segurança', 'teacher_id'=>3]);
-        DB::table('subjects')->insert(['name'=>'Projetos de TI', 'teacher_id'=>2]);
+        DB::table('subjects')->insert(['name'=>'Projetos de TI', 'teacher_id'=>1]);
+        DB::table('subjects')->insert(['name'=>'Planejamento de Projetos', 'teacher_id'=>1]);
     }
 }

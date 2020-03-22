@@ -22,11 +22,7 @@
                                 <td>{{$s->id}}</td>
                                 <td>{{$s->name}}</td>
                                 <td>{{$s->email}}</td>
-                                @foreach($courses as $c)
-                                    @if($c->id == $s->course_id)
-                                        <td>{{$c->name}}</td>
-                                    @endif
-                                @endforeach
+                                <td>{{$s->course->name}}</td>
                                 <td>
                                     <a href="/home/students/edit/{{$s->id}}" class="btn btn-sm btn-primary">Editar</a>
                                     <a href="/home/students/destroy/{{$s->id}}" class="btn btn-sm btn-danger">Apagar</a>

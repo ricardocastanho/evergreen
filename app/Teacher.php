@@ -10,6 +10,10 @@ class Teacher extends Authenticatable
 {
     use Notifiable;
 
+    public function subjects(){
+        return $this->hasOne('App\Subjects');
+    }
+
     protected $guard = 'teacher';
 
     /**

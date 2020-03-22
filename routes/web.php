@@ -25,6 +25,8 @@ Route::get('/home/students/destroy/{id}', 'Auth\DestroyController@destroystudent
 Route::get('/home/students/edit/{id}', 'Auth\EditController@editstudent');
 Route::post('/home/students/{id}', 'Auth\EditController@updatestudent')->name('updatestudent');
 
+Route::get('/home/teachers', 'HomeController@showteachers')->name('adm.teachers.list');
+
 Route::get('/student', 'StudentController@index')->name('student.home');
 Route::get('/student/login', 'Auth\LoginStudentController@index')->name('student.login');
 Route::post('/student/login', 'Auth\LoginStudentController@login')->name('student.login.submit');

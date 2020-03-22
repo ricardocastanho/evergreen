@@ -25,12 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('admin\home');
     }
     public function showstudents()
     {
         $students = Student::all();
         $courses = Course::all();
-        return view('students_list', compact('students', 'courses'));
+        return view('admin\students_list', compact('students', 'courses'));
     }
 }

@@ -20,12 +20,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');
+
 Route::get('/home/students', 'HomeController@showstudents')->name('adm.students.list');
-Route::get('/home/students/destroy/{id}', 'Auth\DestroyController@destroystudent');
 Route::get('/home/students/edit/{id}', 'Auth\EditController@editstudent');
-Route::post('/home/students/{id}', 'Auth\EditController@updatestudent')->name('updatestudent');
+Route::post('/home/students/{id}', 'Auth\EditController@updatestudent')->name('update.student');
+Route::get('/home/students/destroy/{id}', 'Auth\DestroyController@destroystudent');
 
 Route::get('/home/teachers', 'HomeController@showteachers')->name('adm.teachers.list');
+Route::get('/home/teachers/edit/{id}', 'Auth\EditController@editteacher');
+Route::post('/home/teachers/{id}', 'Auth\EditController@updateteacher')->name('update.teacher');
+Route::get('/home/teachers/destroy/{id}', 'Auth\DestroyController@destroyteacher');
 
 Route::get('/student', 'StudentController@index')->name('student.home');
 Route::get('/student/login', 'Auth\LoginStudentController@index')->name('student.login');

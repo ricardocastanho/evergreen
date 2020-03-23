@@ -17,7 +17,8 @@ class CreateSubjectsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('teacher_id')->unsigned()->nullable();
-            $table->foreign('teacher_id')->references('id')->on('teachers');
+            $table->foreign('teacher_id')->references('id')->on('teachers')->onDelete('cascade')->onUpdate('cascade');;
+            $table->softDeletes();
             $table->timestamps();
         });
     }

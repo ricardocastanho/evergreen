@@ -22,4 +22,12 @@ class DestroyController extends Controller
         }
         return redirect()->intended(route('adm.students.list'));
     }
+    public function destroyteacher($id)
+    {
+        $teacher = Teacher::find($id);
+        if(isset($teacher)){
+            $teacher->delete();
+        }
+        return redirect()->intended(route('adm.teachers.list'));
+    }
 }

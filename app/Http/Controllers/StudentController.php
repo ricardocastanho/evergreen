@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Course;
+use App\CourseSubject;
+use App\Subjects;
+use App\Student;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -18,7 +22,10 @@ class StudentController extends Controller
 
     public function index()
     {
-        return view('student\student');
+        $student = Student::find(2);
+        $coursesubject = CourseSubject::all();
+        $subject = Subjects::all();
+        return view('student\student', compact('student','coursesubject', 'subject'));
     }
 
     /**

@@ -11,9 +11,9 @@ class CourseSubjectsSeed extends Seeder
      */
     public function run()
     {
-        DB::table('course-subjects')->insert(['course_id'=>1, 'subject_id'=>1]);
-        DB::table('course-subjects')->insert(['course_id'=>1, 'subject_id'=>2]);
-        DB::table('course-subjects')->insert(['course_id'=>1, 'subject_id'=>3]);
-        DB::table('course-subjects')->insert(['course_id'=>1, 'subject_id'=>4]);
+        DB::table('course_subjects')->insert(['course_id'=>1, 'subject_id'=>1]);
+        DB::table('course_subjects')->insert(['course_id'=>1, 'subject_id'=>2]);
+        DB::table('course_subjects')->insert(['course_id'=>1, 'subject_id'=>3]);
+        DB::table('course_subjects')->insert(['course_id'=>1, 'subject_id'=>4]);
     }
 }

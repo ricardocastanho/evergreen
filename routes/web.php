@@ -38,3 +38,4 @@ Route::post('/student/login', 'Auth\LoginStudentController@login')->name('studen
 Route::get('/teacher', 'TeacherController@index')->name('teacher.home');
 Route::get('/teacher/login', 'Auth\LoginTeacherController@index')->name('teacher.login');
 Route::post('/teacher/login', 'Auth\LoginTeacherController@login')->name('teacher.login.submit');
+Route::get('/teacher/subject/{id}', 'TeacherController@subjectdetails')->name('teacher.subject.details');

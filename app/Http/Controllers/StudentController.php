@@ -22,10 +22,10 @@ class StudentController extends Controller
 
     public function index()
     {
-        $student = Student::find(2);
+        $student = Student::find(1);
         $coursesubject = CourseSubject::all();
         $subject = Subjects::all();
-        return view('student\student', compact('student','coursesubject', 'subject'));
+        return view('student\home', compact('student','coursesubject', 'subject'));
     }
 
     /**

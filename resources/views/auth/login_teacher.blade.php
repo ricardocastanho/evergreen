@@ -1,5 +1,6 @@
+<!doctype html>
 <head>
-    <title>Sisitema Acadêmico</title>
+    <title>Sistema Acadêmico</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 

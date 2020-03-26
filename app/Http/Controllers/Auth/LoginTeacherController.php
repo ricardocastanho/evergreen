@@ -33,7 +33,8 @@ class LoginTeacherController extends Controller
     }
 
     public function index(){
-        return view('auth.login_teacher');
+        $current = "teacher";
+        return view('auth.login_users', compact('current'));
     }
 
 }

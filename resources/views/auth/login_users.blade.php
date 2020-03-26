@@ -6,14 +6,20 @@
 
 <body>
 <h1 class="display-1 text-light">padding</h1>
-<div class="container">
-    <h1 class="display-4 text-center">Ever<span class="text-success">Green</span></h1>
-    <div class="row justify-content-center">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title text-center">Portal do Professor</h3><br>
-                        <form method="POST" action="{{ route('teacher.login.submit') }}">
+    <div class="container">
+        <h1 class="display-4 text-center">Ever<span class="text-success">Green</span></h1>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+
+                        @if($current == "student")
+                            <h3 class="card-title text-center">Portal do Aluno</h3><br>
+                            <form method="POST" action="{{ route('student.login.submit') }}">
+                        @elseif($current == "teacher")
+                            <h3 class="card-title text-center">Portal do Professor</h3><br>
+                            <form method="POST" action="{{ route('teacher.login.submit') }}">
+                       @endif
                             @csrf
 
                             <div class="form-group row">
@@ -50,7 +56,7 @@
                                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                         <label class="form-check-label" for="remember">
-                                                Lembrar-me
+                                            Lembrar-me
                                         </label>
                                     </div>
                                 </div>
@@ -78,6 +84,5 @@
             </div>
         </div>
     </div>
-</div>
 </body>
 </html>

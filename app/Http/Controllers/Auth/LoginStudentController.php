@@ -27,13 +27,14 @@ class LoginStudentController extends Controller
         $authOK = Auth::guard('student')->attempt($credentials, $request->remember);
 
         if($authOK){
-            return redirect()->intended(route('student.home')); 
+            return redirect()->intended(route('student.home'));
         }
         return redirect()->back()->withInputs($request->only('email', 'remember'));
     }
 
     public function index(){
-        return view('auth.login_student');
+        $current = "student";
+        return view('auth.login_users', compact('current'));
     }
 
 }

@@ -32,7 +32,7 @@
                                             <td>2020-1</td>
                                             <td>{{$s->name}}</td>
                                             <td>120</td>
-                                            <td><a href="{{route('teacher.subject.details', $s->id)}}" class="btn btn-sm btn-primary">Ver</a></td>
+                                            <td><a href="{{route('teacher.subject.details', $s->id)}}" class="btn btn-sm btn-success">Ver</a></td>
                                         </tr>
                                     @endif
                                 @endforeach

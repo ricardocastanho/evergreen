@@ -27,7 +27,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin\home');
+        $current = "admin";
+        return view('admin\home', compact('current'));
     }
     public function showstudents()
     {

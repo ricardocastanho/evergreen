@@ -34,7 +34,7 @@
                                                     <td>{{$st->name}}</td>
                                                     <td>10</td>
                                                     <td>0</td>
-                                                    <td><a href="" class="btn btn-sm btn-primary">Ver</a></td>
+                                                    <td><a href="" class="btn btn-sm btn-success">Ver</a></td>
                                                 </tr>
                                             @endif
                                         @endforeach

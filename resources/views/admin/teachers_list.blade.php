@@ -32,7 +32,7 @@
                                     </ul>
                                 </td>
                                 <td>
-                                    <a href="/home/teachers/edit/{{$t->id}}" class="btn btn-sm btn-primary">Editar</a>
+                                    <a href="/home/teachers/edit/{{$t->id}}" class="btn btn-sm btn-success">Editar</a>
                                     <a href="/home/teachers/destroy/{{$t->id}}" class="btn btn-sm btn-danger">Apagar</a>
                                 </td>
                             </tr>
@@ -42,7 +42,7 @@
                 </div>
                 <div>
                     <div class="card-footer">
-                        <a href="{{ route('register') }}" class="btn btn-sm btn-primary">Cadastrar novo Professor</a>
+                        <a href="{{ route('register') }}" class="btn btn-sm btn-success">Cadastrar novo Professor</a>
                     </div>
                 </div>
             </div>

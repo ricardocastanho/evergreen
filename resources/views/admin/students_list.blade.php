@@ -24,7 +24,7 @@
                                 <td>{{$s->email}}</td>
                                 <td>{{$s->course->name}}</td>
                                 <td>
-                                    <a href="/home/students/edit/{{$s->id}}" class="btn btn-sm btn-primary">Editar</a>
+                                    <a href="/home/students/edit/{{$s->id}}" class="btn btn-sm btn-success">Editar</a>
                                     <a href="/home/students/destroy/{{$s->id}}" class="btn btn-sm btn-danger">Apagar</a>
                                 </td>
                             </tr>
@@ -34,7 +34,7 @@
                 </div>
                 <div>
                     <div class="card-footer">
-                        <a href="{{ route('register') }}" class="btn btn-sm btn-primary">Cadastrar novo Aluno</a>
+                        <a href="{{ route('register') }}" class="btn btn-sm btn-success">Cadastrar novo Aluno</a>
                     </div>
                 </div>
             </div>

@@ -34,7 +34,7 @@
                 </div>
                 <div>
                     <div class="card-footer">
-                        <a href="{{ route('register') }}" class="btn btn-sm btn-success">Cadastrar novo Aluno</a>
+                        <a href="{{ route('adm.students.create') }}" class="btn btn-sm btn-success">Cadastrar novo Aluno</a>
                     </div>
                 </div>
             </div>

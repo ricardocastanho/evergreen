@@ -20,7 +20,7 @@
                                     Acadêmicos EAD, Acadêmicos Presencial
                                 </p>
                                 <a href="{{ route('adm.students.list') }}" class="btn btn-success">Acadêmicos</a>
-                                <a href="{{ route('register') }}" class="btn btn-light">Cadastrar</a>
+                                <a href="{{ route('adm.students.create') }}" class="btn btn-light">Cadastrar</a>
                             </div>
                         </div>
                         <div class="card border">

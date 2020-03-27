@@ -20,11 +20,20 @@ class EditController extends Controller
     {
         $student = Student::find($id);
         $course = Course::all();
-        $edit = "student";
+        $current = "student";
         if(isset($student)){
-            return view('auth\register', compact('student', 'course', 'edit'));
+            return view('auth\edit', compact('student', 'course', 'current'));
         }
         return redirect()->route('adm.students.list');
+    }
+    public function editteacher($id)
+    {
+        $teacher = Teacher::find($id);
+        $current = "teacher";
+        if(isset($teacher)){
+            return view('auth\edit', compact('teacher', 'current'));
+        }
+        return redirect()->route('adm.teachers.list');
     }
 
     public function updatestudent(Request $request, $id)
@@ -38,15 +47,6 @@ class EditController extends Controller
             $student->save();
         }
         return redirect()->route('adm.students.list');
-    }
-    public function editteacher($id)
-    {
-        $teacher = Teacher::find($id);
-        $edit = "teacher";
-        if(isset($teacher)){
-            return view('auth\register', compact('teacher', 'edit'));
-        }
-        return redirect()->route('adm.teachers.list');
     }
 
     public function updateteacher(Request $request, $id)

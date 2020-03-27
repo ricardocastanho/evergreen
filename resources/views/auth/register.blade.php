@@ -1,24 +1,34 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                @if(isset($current) && $current == "student")
-                    <div class="card-header">Cadastrar - Aluno</div>
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('adm.students.create.post') }}">
-                            @csrf
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
 
-                            <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">Nome</label>
+                    @if(isset($current) && $current == "student")
+                        <div class="card-header">Cadastrar - Aluno</div>
+                        <div class="card-body">
+                            <form method="POST" action="{{ route('adm.create.student.post') }}">
 
-                                <div class="col-md-6">
-                                    <input id="name"  type="text" class="form-control @error('name') is-invalid @enderror" name="name" required autocomplete="name" autofocus>
+                                @elseif(isset($current) && $current == "teacher")
+                                    <div class="card-header">Cadastrar - Professor</div>
+                                    <div class="card-body">
+                                        <form method="POST" action="{{ route('adm.create.teacher.post') }}">
+                                            @endif
+                                            @csrf
 
-                                    @error('name')
-                                    <span class="invalid-feedback" role="alert">
+                                            <div class="form-group row">
+                                                <label for="name"
+                                                       class="col-md-4 col-form-label text-md-right">Nome</label>
+
+                                                <div class="col-md-6">
+                                                    <input id="name" type="text"
+                                                           class="form-control @error('name') is-invalid @enderror"
+                                                           name="name" required autocomplete="name" autofocus>
+
+                                                    @error('name')
+                                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
@@ -39,6 +49,7 @@
                                 </div>
                             </div>
 
+                                            @if(isset($current) && $current == "student")
                             <div class="form-group row">
                                 <label for="course" class="col-md-4 col-form-label text-md-right">Curso</label>
                                 <div class="col-md-6">
@@ -49,6 +60,7 @@
                                     </select>
                                 </div>
                             </div>
+                                            @endif
 
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">Senha</label>
@@ -82,7 +94,6 @@
                         </form>
                     </div>
                 </div>
-                @endif
             </div>
         </div>
     </div>

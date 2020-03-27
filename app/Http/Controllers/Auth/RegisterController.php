@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Course;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Student;
 use App\Teacher;
-use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -62,16 +63,40 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param array $data
      * @return \App\Student
      */
-    protected function create(array $data)
+    public function indexStudent()
     {
-        return Student::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'course_id' => $data['course_id'],
-            'password' => Hash::make($data['password']),
-        ]);
+        $course = Course::all();
+        $current = "student";
+        return view('auth\register', compact('current', 'course'));
+    }
+
+    public function indexTeacher()
+    {
+        $current = "teacher";
+        return view('auth\register', compact('current'));
+    }
+
+    protected function createStudent(Request $request)
+    {
+        $user = new Student();
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->course_id = $request->input('course_id');
+        $user->password = Hash::make($request->input('password'));
+        $user->save();
+        return redirect()->route('adm.students.list');
+    }
+
+    protected function createTeacher(Request $request)
+    {
+        $user = new Teacher();
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->password = Hash::make($request->input('password'));
+        $user->save();
+        return redirect()->route('adm.teachers.list');
     }
 }

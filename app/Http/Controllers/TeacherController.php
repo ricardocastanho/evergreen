@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Course;
 use App\CourseSubject;
 use App\Student;
 use App\Subjects;
 use App\Teacher;
-use App\Course;
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
@@ -27,7 +27,8 @@ class TeacherController extends Controller
         return view('teacher\home', compact('subject', 'teacher'));
     }
 
-    public function subjectdetails($id){
+    public function subjectDetails($id)
+    {
         $subject = Subjects::find($id);
         $coursesubject = CourseSubject::all();
         $course = Course::all();

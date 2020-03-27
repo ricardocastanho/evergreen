@@ -23,20 +23,20 @@ Auth::routes();
 Route::get('home', 'HomeController@index')->name('home');
 
 //Admin to Student's Routes
-Route::get('/home/students', 'HomeController@showstudents')->name('adm.students.list');
+Route::get('/home/students', 'HomeController@showStudents')->name('adm.students.list');
 Route::get('/home/students/create', 'Auth\RegisterController@indexStudent')->name('adm.students.create');
 Route::post('/home/students/create', 'Auth\RegisterController@createStudent')->name('adm.create.student.post');
-Route::get('/home/students/edit/{id}', 'Auth\EditController@editstudent');
-Route::post('/home/students/{id}', 'Auth\EditController@updatestudent')->name('update.student');
-Route::get('/home/students/destroy/{id}', 'Auth\DestroyController@destroystudent');
+Route::get('/home/students/edit/{id}', 'Auth\EditController@editStudent');
+Route::post('/home/students/{id}', 'Auth\EditController@updateStudent')->name('update.student');
+Route::get('/home/students/destroy/{id}', 'Auth\DestroyController@destroyStudent');
 
 //Admin to Teacher's Routes
-Route::get('/home/teachers', 'HomeController@showteachers')->name('adm.teachers.list');
+Route::get('/home/teachers', 'HomeController@showTeachers')->name('adm.teachers.list');
 Route::get('/home/teachers/create', 'Auth\RegisterController@indexTeacher')->name('adm.teachers.create');
 Route::post('/home/teachers/create', 'Auth\RegisterController@createTeacher')->name('adm.create.teacher.post');
-Route::get('/home/teachers/edit/{id}', 'Auth\EditController@editteacher');
-Route::post('/home/teachers/{id}', 'Auth\EditController@updateteacher')->name('update.teacher');
-Route::get('/home/teachers/destroy/{id}', 'Auth\DestroyController@destroyteacher');
+Route::get('/home/teachers/edit/{id}', 'Auth\EditController@editTeacher');
+Route::post('/home/teachers/{id}', 'Auth\EditController@updateTeacher')->name('update.teacher');
+Route::get('/home/teachers/destroy/{id}', 'Auth\DestroyController@destroyTeacher');
 
 //Student's Routes
 Route::get('/student', 'StudentController@index')->name('student.home');
@@ -47,4 +47,4 @@ Route::post('/student/login', 'Auth\LoginStudentController@login')->name('studen
 Route::get('/teacher', 'TeacherController@index')->name('teacher.home');
 Route::get('/teacher/login', 'Auth\LoginTeacherController@index')->name('teacher.login');
 Route::post('/teacher/login', 'Auth\LoginTeacherController@login')->name('teacher.login.submit');
-Route::get('/teacher/subject/{id}', 'TeacherController@subjectdetails')->name('teacher.subject.details');
+Route::get('/teacher/subject/{id}', 'TeacherController@subjectDetails')->name('teacher.subject.details');

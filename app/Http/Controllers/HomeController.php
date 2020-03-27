@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Student;
 use App\Subjects;
 use App\Teacher;
-use Illuminate\Http\Request;
-use App\Student;
-use App\Course;
 
 class HomeController extends Controller
 {
@@ -30,12 +28,14 @@ class HomeController extends Controller
         $current = "admin";
         return view('admin\home', compact('current'));
     }
-    public function showstudents()
+
+    public function showStudents()
     {
         $students = Student::all();
         return view('admin\students_list', compact('students'));
     }
-    public function showteachers()
+
+    public function showTeachers()
     {
         $teachers = Teacher::all();
         $subjects = Subjects::all();

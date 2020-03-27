@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Student;
 use App\Teacher;
-use Illuminate\Http\Request;
 
 class DestroyController extends Controller
 {
@@ -14,18 +13,19 @@ class DestroyController extends Controller
         $this->middleware('auth');
     }
 
-    public function destroystudent($id)
+    public function destroyStudent($id)
     {
         $student = Student::find($id);
-        if(isset($student)){
+        if (isset($student)) {
             $student->delete();
         }
         return redirect()->intended(route('adm.students.list'));
     }
-    public function destroyteacher($id)
+
+    public function destroyTeacher($id)
     {
         $teacher = Teacher::find($id);
-        if(isset($teacher)){
+        if (isset($teacher)) {
             $teacher->delete();
         }
         return redirect()->intended(route('adm.teachers.list'));

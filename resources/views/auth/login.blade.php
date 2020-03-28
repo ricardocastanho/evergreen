@@ -1,23 +1,20 @@
-<!doctype html>
-<head>
-    <title>Sistema Acadêmico</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
+@extends('layouts.index')
 
-<body>
-<h1 class="display-1 text-light">padding</h1>
-<div class="container">
-    <h1 class="display-4 text-center">Ever<span class="text-success">Green</span></h1>
-    <div class="row justify-content-center">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title text-center">Administrador</h3><br>
-                    <form method="POST" action="{{ route('login') }}">
+@section('layout')
+    <div class="container padding1">
+        <div class="container">
+            <h1 class="display-4 text-center"><span class="text-light">Ever</span><span
+                    class="text-success">Green</span></h1>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title text-center">Administrador</h3><br>
+                            <form method="POST" action="{{ route('login') }}">
 
-                        @csrf
+                                @csrf
 
-                        <div class="form-group row">
+                                <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-mail</label>
 
                             <div class="col-md-6">
@@ -73,11 +70,11 @@
                                 @endif
                             </div>
                         </div>
-                    </form>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</body>
-</html>
+@endsection

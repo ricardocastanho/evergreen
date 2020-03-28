@@ -1,13 +1,9 @@
-<!doctype html>
-<head>
-    <title>Sistema Acadêmico</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
+@extends('layouts.index')
 
-<body>
-<h1 class="display-1 text-light">padding</h1>
-    <div class="container">
-        <h1 class="display-4 text-center">Ever<span class="text-success">Green</span></h1>
+@section('layout')
+    <div class="container padding1">
+        <h1 class="display-4 text-center"><span class="text-light">Ever</span><span class="text-success">Green</span>
+        </h1>
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="card">
@@ -16,8 +12,8 @@
                         @if($current == "student")
                             <h3 class="card-title text-center">Portal do Aluno</h3><br>
                             <form method="POST" action="{{ route('student.login.submit') }}">
-                        @elseif($current == "teacher")
-                            <h3 class="card-title text-center">Portal do Professor</h3><br>
+                                @elseif($current == "teacher")
+                                    <h3 class="card-title text-center">Portal do Professor</h3><br>
                             <form method="POST" action="{{ route('teacher.login.submit') }}">
                        @endif
                             @csrf
@@ -84,5 +80,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+@endsection

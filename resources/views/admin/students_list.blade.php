@@ -8,34 +8,33 @@
                     <h5 class="card-title">Acadêmicos</h5>
                     <table class="table table-ordered table-hover">
                         <thead>
-                        <tr>
-                            <th>Matrícula</th>
-                            <th>Nome</th>
-                            <th>Email</th>
-                            <th>Curso</th>
-                            <th>Ações</th>
-                        </tr>
+                            <tr>
+                                <th>Matrícula</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Curso</th>
+                                <th>Ações</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        @foreach($students as $s)
-                            <tr>
-                                <td>{{$s->id}}</td>
-                                <td>{{$s->name}}</td>
-                                <td>{{$s->email}}</td>
-                                <td>{{$s->course->name}}</td>
-                                <td>
-                                    <a href="/home/students/edit/{{$s->id}}" class="btn btn-sm btn-success">Editar</a>
-                                    <a href="/home/students/destroy/{{$s->id}}" class="btn btn-sm btn-danger">Apagar</a>
-                                </td>
-                            </tr>
-                        @endforeach
+                            @foreach($students as $s)
+                                <tr>
+                                    <td>{{$s->id}}</td>
+                                    <td>{{$s->name}}</td>
+                                    <td>{{$s->email}}</td>
+                                    <td>{{$s->course->name}}</td>
+                                    <td>
+                                        <a href="/home/students/edit/{{$s->id}}" class="btn btn-sm btn-success">Editar</a>
+                                        <a href="/home/students/destroy/{{$s->id}}" class="btn btn-sm btn-danger">Apagar</a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
                 <div>
                     <div class="card-footer">
-                        <a href="{{ route('adm.students.create') }}" class="btn btn-sm btn-success">Cadastrar novo
-                            Aluno</a>
+                        <a href="{{ route('adm.students.create') }}" class="btn btn-sm btn-success">Cadastrar novo Aluno</a>
                     </div>
                 </div>
             </div>

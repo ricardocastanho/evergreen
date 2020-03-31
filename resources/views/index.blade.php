@@ -2,8 +2,7 @@
 
 @section('layout')
     <div class="container px-sm-5 padding1">
-        <h1 class="display-4 text-center"><span class="text-light">Ever</span><span class="text-success">Green</span>
-        </h1>
+        <h1 class="display-4 text-center"><span class="text-light">Ever</span><span class="text-success">Green</span></h1>
         <h4 class="text-center"><span class="text-light">A universidade dos universitários</span></h4>
         <main role="main">
             <div class="row padding2 opacity align">

@@ -24,7 +24,6 @@
                                     <th>Ações</th>
                                 </tr>
                             </thead>
-
                             <tbody>
                                 @foreach($subject as $s)
                                     @if($s->teacher_id == $teacher->id)

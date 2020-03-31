@@ -15,17 +15,16 @@
                         @endif
 
                         <h5 class="card-title">{{$subject->name}}</h5>
-                        <table class="table table-ordered table-hover">
-                            <thead>
-                            <tr>
-                                <th>Alunos</th>
-                                <th>Notas</th>
-                                <th>Faltas</th>
-                                <th>Ações</th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
+                            <table class="table table-ordered table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Alunos</th>
+                                    <th>Notas</th>
+                                    <th>Faltas</th>
+                                    <th>Ações</th>
+                                </tr>
+                                </thead>
+                                <tbody>
                                 @foreach($coursesubject as $cs)
                                     @foreach($course as $c)
                                         @foreach($student as $st)

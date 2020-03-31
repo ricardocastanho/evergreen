@@ -11,20 +11,17 @@
                     <div class="card text-center mb-3">
                         <div class="card-body">
                             <h3 class="card-title text-success">Acadêmico</h3>
-                            <p class="card-text">
-                                Acadêmicos EAD, Acadêmicos Presencial
-                            </p>
+                            <p class="card-text">Acadêmicos EAD, Acadêmicos Presencial</p>
                             <a href="{{route('student.login')}}" class="btn btn-success btn-block">Entrar</a>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-sm-4">
                     <div class="card text-center border border-sucess">
                         <div class="card-body">
                             <h3 class="card-title text-success">Colaboradores</h3>
-                            <p class="card-text">
-                                Professores
-                            </p>
+                            <p class="card-text">Professores</p>
                             <a href="{{route('teacher.login')}}" class="btn btn-success btn-block">Entrar</a>
                         </div>
                     </div>

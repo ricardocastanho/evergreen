@@ -7,6 +7,7 @@ use App\CourseSubject;
 use App\Student;
 use App\Subjects;
 use App\Teacher;
+use Illuminate\Support\Facades\Auth;
 
 class TeacherController extends Controller
 {
@@ -21,8 +22,9 @@ class TeacherController extends Controller
      */
     public function index()
     {
+        $id = Auth::user()->id;
+        $teacher = Teacher::find($id);
         $subject = Subjects::all();
-        $teacher = Teacher::find(1);
         return view('teacher\home', compact('subject', 'teacher'));
     }
 

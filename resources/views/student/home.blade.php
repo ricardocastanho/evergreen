@@ -31,7 +31,7 @@
                                                 <td>{{$s->name}}</td>
                                                 <td>Aprovado</td>
                                                 <td>120</td>
-                                                <td>10</td>
+                                                <td class="text-center">10</td>
                                             </tr>
                                         @endif
                                     @endforeach

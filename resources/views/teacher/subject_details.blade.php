@@ -3,8 +3,8 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
+            <div class="col-md-12">
+                <div class="card shadow-sm">
                     <div class="card-header">Olá, {{ Auth::user()->name }}</div>
                     <div class="card-body">
                         @if (session('status'))
@@ -17,6 +17,7 @@
                             <table class="table table-ordered table-hover">
                                 <thead>
                                     <tr>
+                                        <th>Matrícula</th>
                                         <th>Alunos</th>
                                         <th>Notas</th>
                                         <th>Faltas</th>
@@ -29,6 +30,7 @@
                                             @foreach($student as $st)
                                                 @if($subject->id == $cs->subject_id && $cs->course_id == $c->id && $c->id == $st->course_id)
                                                     <tr>
+                                                        <td>{{$st->id}}</td>
                                                         <td>{{$st->name}}</td>
                                                         <td>10</td>
                                                         <td>0</td>

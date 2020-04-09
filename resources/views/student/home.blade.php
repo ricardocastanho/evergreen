@@ -3,15 +3,39 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Olá, {{ Auth::user()->name }}</div>
+            <div class="col-md-12">
+
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ Auth::user()->name }}</h2>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm margin">
+                    <div class="card-body">
+                        <h5 class="card-title">Meus Cursos</h5>
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="{{url("storage/ads_logo")}}" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{$student->course->name}}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm">
                     <div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">{{ session('status') }}</div>
                         @endif
 
-                        <h5 class="card-title">Grade Curricular</h5>
+                        <h5 class="card-title">Minhas Disciplinas</h5>
                         <table class="table table-ordered table-hover">
                             <thead>
                                 <tr>

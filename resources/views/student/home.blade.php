@@ -5,19 +5,19 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
 
-                <div class="card shadow-sm">
+                <div class="card shadow-sm margin-top">
                     <div class="card-body">
                         <h2 class="card-title">{{ Auth::user()->name }}</h2>
                     </div>
                 </div>
 
-                <div class="card shadow-sm margin">
+                <div class="card shadow-sm margin-top2">
                     <div class="card-body">
                         <h5 class="card-title">Meus Cursos</h5>
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
-                                    <img src="{{url("storage/ads_logo")}}" class="card-img" alt="...">
+                                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" class="card-img" height="100px">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
 
-                <div class="card shadow-sm">
+                <div class="card shadow-sm margin-top2">
                     <div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">{{ session('status') }}</div>

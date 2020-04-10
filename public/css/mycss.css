@@ -1,8 +1,10 @@
-.margin{
+.margin-bottom{
     margin-bottom: 20px;
+}.margin-top{
+     margin-top: 50px
 }
-.padding-bottom{
-    padding-bottom: 20px;
+.margin-top2{
+       margin-top: 20px
 }
 .opacity {
     opacity: 95%;

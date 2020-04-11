@@ -17,9 +17,24 @@
 .padding2 {
     padding-top: 50px;
 }
+.margin {
+    margin: 20px;
+}
 
 .align {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+.img-profile {
+    vertical-align: middle;
+    width: 85px;
+    height: 100px;
+    border-radius: 50%;
+}
+.img-profile-small {
+     vertical-align: middle;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+ }

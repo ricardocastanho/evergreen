@@ -11,8 +11,10 @@ class StudentSeed extends Seeder
      */
     public function run()
     {
-        DB::table('students')->insert(['name'=>'Ricardo', 'email'=>'ricardo@gmail.com', 'password'=>Hash::make('12345678'), 'course_id'=>1]);
+        DB::table('students')->insert(['name'=>'Ricardo Castanho Soares', 'email'=>'ricardo@gmail.com', 'password'=>Hash::make('12345678'), 'course_id'=>1]);
         DB::table('students')->insert(['name'=>'Rafaella', 'email'=>'rafa@gmail.com', 'password'=>Hash::make('12345678'), 'course_id'=>1]);
         DB::table('students')->insert(['name'=>'Raziel', 'email'=>'razi@gmail.com', 'password'=>Hash::make('12345678'), 'course_id'=>1]);
+        DB::table('students')->insert(['name'=>'Leonardo', 'email'=>'leo@gmail.com', 'password'=>Hash::make('12345678'), 'course_id'=>2]);
+        DB::table('students')->insert(['name'=>'Paulo', 'email'=>'paulo@gmail.com', 'password'=>Hash::make('12345678'), 'course_id'=>3]);
     }
 }

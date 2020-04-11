@@ -7,17 +7,17 @@
 
                 <div class="card shadow-sm margin-top">
                     <div class="card-body">
-                        <h2 class="card-title">{{ Auth::user()->name }}</h2>
+                        <h1 class="card-title margin"><img src="/storage/images/ricardo.jpeg" class="img-profile">&nbsp;{{ Auth::user()->name }}</h1>
                     </div>
                 </div>
 
                 <div class="card shadow-sm margin-top2">
                     <div class="card-body">
-                        <h5 class="card-title">Meus Cursos</h5>
+                        <h3 class="card-title">Meus Cursos</h3>
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
-                                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" class="card-img" height="100px">
+                                    <img src="/storage/{{$student->course->file}}" class="card-img" height="150px">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -35,7 +35,7 @@
                             <div class="alert alert-success" role="alert">{{ session('status') }}</div>
                         @endif
 
-                        <h5 class="card-title">Minhas Disciplinas</h5>
+                        <h3 class="card-title">Minhas Disciplinas</h3>
                         <table class="table table-ordered table-hover">
                             <thead>
                                 <tr>

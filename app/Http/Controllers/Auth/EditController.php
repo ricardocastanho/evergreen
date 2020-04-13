@@ -20,9 +20,9 @@ class EditController extends Controller
     {
         $student = Student::find($id);
         $course = Course::all();
-        $current = "student";
+        $view = "student";
         if (isset($student)) {
-            return view('auth\edit', compact('student', 'course', 'current'));
+            return view('auth\edit', compact('student', 'course', 'view'));
         }
         return redirect()->route('adm.students.list');
     }
@@ -30,9 +30,9 @@ class EditController extends Controller
     public function editTeacher($id)
     {
         $teacher = Teacher::find($id);
-        $current = "teacher";
+        $view = "teacher";
         if (isset($teacher)) {
-            return view('auth\edit', compact('teacher', 'current'));
+            return view('auth\edit', compact('teacher', 'view'));
         }
         return redirect()->route('adm.teachers.list');
     }

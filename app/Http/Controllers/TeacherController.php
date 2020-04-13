@@ -34,6 +34,7 @@ class TeacherController extends Controller
         $coursesubject = CourseSubject::all();
         $course = Course::all();
         $student = Student::all();
-        return view('teacher\subject_details', compact('subject', 'coursesubject', 'course', 'student'));
+        $current = "teacher";
+        return view('teacher\subject_details', compact('subject', 'coursesubject', 'course', 'student', 'current'));
     }
 }

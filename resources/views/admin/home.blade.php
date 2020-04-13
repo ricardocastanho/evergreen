@@ -17,7 +17,7 @@
                             <h5 class="card-title">Acadêmicos</h5>
                             <p class="card-text">Acadêmicos EAD, Acadêmicos Presencial</p>
                             <a href="{{ route('adm.students.list') }}" class="btn btn-success">Acadêmicos</a>
-                            <a href="{{ route('adm.students.create') }}" class="btn btn-light">Cadastrar</a>
+                            <a href="{{ route('adm.create.student') }}" class="btn btn-light">Cadastrar</a>
                         </div>
                     </div>
                     <div class="card border">
@@ -25,7 +25,7 @@
                             <h5 class="card-title">Colaboradores</h5>
                             <p class="card-text">Professores</p>
                             <a href="{{ route('adm.teachers.list') }}" class="btn btn-success">Professores</a>
-                            <a href="{{ route('adm.teachers.create') }}" class="btn btn-light">Cadastrar</a>
+                            <a href="{{ route('adm.create.teacher') }}" class="btn btn-light">Cadastrar</a>
                         </div>
                     </div>
                 </div>

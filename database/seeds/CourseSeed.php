@@ -11,8 +11,8 @@ class CourseSeed extends Seeder
      */
     public function run()
     {
-        DB::table('courses')->insert(['name'=>'Análise e Desenvolvimento de Sistemas', 'file'=>'images/ads.jpg']);
-        DB::table('courses')->insert(['name'=>'Administração Bacharelato', 'file'=>'images/administration.jpg']);
-        DB::table('courses')->insert(['name'=>'Engenharia Mecânica', 'file'=>'images/engineering.jpg']);
+        DB::table('courses')->insert(['name'=>'Análise e Desenvolvimento de Sistemas', 'image'=>'images/ads.jpg']);
+        DB::table('courses')->insert(['name'=>'Administração Bacharelato', 'image'=>'images/administration.jpg']);
+        DB::table('courses')->insert(['name'=>'Engenharia Mecânica', 'image'=>'images/engineering.jpg']);
     }
 }

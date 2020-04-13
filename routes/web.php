@@ -19,21 +19,19 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//Home Admin Route
+//Admin Home Route
 Route::get('home', 'HomeController@index')->name('home');
-
 //Admin to Student's Routes
 Route::get('/home/students', 'HomeController@showStudents')->name('adm.students.list');
-Route::get('/home/students/create', 'Auth\RegisterController@indexStudent')->name('adm.students.create');
-Route::post('/home/students/create', 'Auth\RegisterController@createStudent')->name('adm.create.student.post');
+Route::get('/home/students/create', 'Auth\RegisterController@createStudent')->name('adm.create.student');
+Route::post('/home/students/create', 'Auth\RegisterController@storeStudent')->name('adm.store.student');
 Route::get('/home/students/edit/{id}', 'Auth\EditController@editStudent');
 Route::post('/home/students/{id}', 'Auth\EditController@updateStudent')->name('update.student');
 Route::get('/home/students/destroy/{id}', 'Auth\DestroyController@destroyStudent');
-
 //Admin to Teacher's Routes
 Route::get('/home/teachers', 'HomeController@showTeachers')->name('adm.teachers.list');
-Route::get('/home/teachers/create', 'Auth\RegisterController@indexTeacher')->name('adm.teachers.create');
-Route::post('/home/teachers/create', 'Auth\RegisterController@createTeacher')->name('adm.create.teacher.post');
+Route::get('/home/teachers/create', 'Auth\RegisterController@createTeacher')->name('adm.create.teacher');
+Route::post('/home/teachers/create', 'Auth\RegisterController@storeTeacher')->name('adm.store.teacher');
 Route::get('/home/teachers/edit/{id}', 'Auth\EditController@editTeacher');
 Route::post('/home/teachers/{id}', 'Auth\EditController@updateTeacher')->name('update.teacher');
 Route::get('/home/teachers/destroy/{id}', 'Auth\DestroyController@destroyTeacher');

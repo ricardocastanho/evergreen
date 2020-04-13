@@ -42,7 +42,7 @@
                 </div>
                 <div>
                     <div class="card-footer">
-                        <a href="{{ route('adm.teachers.create') }}" class="btn btn-sm btn-success">Cadastrar novo Professor</a>
+                        <a href="{{ route('adm.create.teacher') }}" class="btn btn-sm btn-success">Cadastrar novo Professor</a>
                     </div>
                 </div>
             </div>

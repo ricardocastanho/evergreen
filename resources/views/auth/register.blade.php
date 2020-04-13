@@ -8,11 +8,11 @@
                     @if(isset($current) && $current == "student")
                         <div class="card-header">Cadastrar - Aluno</div>
                         <div class="card-body">
-                            <form method="POST" action="{{ route('adm.create.student.post') }}">
+                            <form method="POST" action="{{ route('adm.store.student') }}">
                     @elseif(isset($current) && $current == "teacher")
                         <div class="card-header">Cadastrar - Professor</div>
                         <div class="card-body">
-                            <form method="POST" action="{{ route('adm.create.teacher.post') }}">
+                            <form method="POST" action="{{ route('adm.store.teacher') }}">
                     @endif
 
                     @csrf

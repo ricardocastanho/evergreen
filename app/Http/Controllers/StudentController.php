@@ -25,6 +25,7 @@ class StudentController extends Controller
         $student = Student::find($id);
         $coursesubject = CourseSubject::all();
         $subject = Subjects::all();
-        return view('student\home', compact('student','coursesubject', 'subject'));
+        $current = "student";
+        return view('student\home', compact('student','coursesubject', 'subject', 'current'));
     }
 }

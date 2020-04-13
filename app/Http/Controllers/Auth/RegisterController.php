@@ -66,20 +66,20 @@ class RegisterController extends Controller
      * @param array $data
      * @return \App\Student
      */
-    public function indexStudent()
+    public function createStudent()
     {
         $course = Course::all();
         $current = "student";
         return view('auth\register', compact('current', 'course'));
     }
 
-    public function indexTeacher()
+    public function createTeacher()
     {
         $current = "teacher";
         return view('auth\register', compact('current'));
     }
 
-    protected function createStudent(Request $request)
+    protected function storeStudent(Request $request)
     {
         $user = new Student();
         $user->name = $request->input('name');
@@ -90,7 +90,7 @@ class RegisterController extends Controller
         return redirect()->route('adm.students.list');
     }
 
-    protected function createTeacher(Request $request)
+    protected function storeTeacher(Request $request)
     {
         $user = new Teacher();
         $user->name = $request->input('name');

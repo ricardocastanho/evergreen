@@ -7,7 +7,7 @@
 
                 <div class="card shadow-sm margin-top">
                     <div class="card-body">
-                        <h1 class="card-title margin"><img src="/storage/images/ricardo.jpeg" class="img-profile">&nbsp;{{ Auth::user()->name }}</h1>
+                        <h1 class="card-title margin"><img src="/storage/{{$student->image}}" class="img-profile">&nbsp;{{ Auth::user()->name }}</h1>
                     </div>
                 </div>
 
@@ -17,7 +17,7 @@
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
-                                    <img src="/storage/{{$student->course->file}}" class="card-img" height="150px">
+                                    <img src="/storage/{{$student->course->image}}" class="card-img" height="100px">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">

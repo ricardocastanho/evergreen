@@ -4,7 +4,6 @@
     <title>Sistema Acadêmico</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/mycss.css') }}" rel="stylesheet">
-    <link href="https://fonts.google.com/specimen/Suez+One?category=Serif" rel="stylesheet">
     <style>
         body {
             background-image: url("{{url('storage/images/background.jpg')}}");

@@ -21,11 +21,9 @@ class StudentController extends Controller
 
     public function index()
     {
-        $id = Auth::user()->id;
-        $student = Student::find($id);
         $coursesubject = CourseSubject::all();
         $subject = Subjects::all();
         $current = "student";
-        return view('student\home', compact('student','coursesubject', 'subject', 'current'));
+        return view('student\home', compact('coursesubject', 'subject', 'current'));
     }
 }

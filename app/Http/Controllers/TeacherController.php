@@ -22,10 +22,8 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        $id = Auth::user()->id;
-        $teacher = Teacher::find($id);
         $subject = Subjects::all();
-        return view('teacher\home', compact('subject', 'teacher'));
+        return view('teacher\home', compact('subject'));
     }
 
     public function subjectDetails($id)

@@ -8,7 +8,7 @@
                 <div class="card shadow-sm margin-top">
                     <div class="card-body">
                         <h1 class="card-title margin">
-                            <img src="/storage/{{$teacher->image}}" class="img-profile">&nbsp;{{ Auth::user()->name }}
+                            <img src="/storage/{{\Auth::user()->image}}" class="img-profile">&nbsp;{{ Auth::user()->name }}
                         </h1>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                             </thead>
                             <tbody>
                                 @foreach($subject as $s)
-                                    @if($s->teacher_id == $teacher->id)
+                                    @if($s->teacher_id == \Auth::user()->id)
                                         <tr>
                                             <td>2020-1</td>
                                             <td>{{$s->name}}</td>
@@ -36,7 +36,9 @@
                                                 <div class="nav " style="list-style-type: none;">
                                                     <a data-toggle="dropdown"><button type="button" class="btn"  style="padding-top: 0px;padding-bottom: 2px"><svg class="bi bi-three-dots-vertical" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.5 13a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm0-5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm0-5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" clip-rule="evenodd"/></svg></button></a>
                                                     <ul class="dropdown-menu dropdown-menu-right">
-                                                        <li class="nav-item"><a class="dropdown-item text-dark" href="{{route('teacher.subject.details', $s->id)}}">Mais Detalhes</a></li>
+                                                        <li class="nav-item">
+                                                            <a class="dropdown-item text-dark" href="{{route('teacher.subject.details', $s->id)}}">Mais Detalhes</a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </td>

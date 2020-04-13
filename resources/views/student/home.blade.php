@@ -8,7 +8,7 @@
                 <div class="card shadow-sm margin-top">
                     <div class="card-body">
                         <h1 class="card-title margin">
-                            <img src="/storage/{{$student->image}}" class="img-profile">&nbsp;{{ Auth::user()->name }}
+                            <img src="/storage/{{\Auth::user()->image}}" class="img-profile">&nbsp;{{ Auth::user()->name }}
                         </h1>
                     </div>
                 </div>
@@ -19,11 +19,11 @@
                         <div class="card mb-3" style="max-width: 540px;">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
-                                    <img src="/storage/{{$student->course->image}}" class="card-img" height="100px">
+                                    <img src="/storage/{{\Auth::user()->course->image}}" class="card-img" height="100px">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h5 class="card-title">{{$student->course->name}}</h5>
+                                        <h5 class="card-title">{{\Auth::user()->course->name}}</h5>
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
                             <tbody>
                                 @foreach($subject as $s)
                                     @foreach($coursesubject as $c)
-                                        @if($s->id == $c->subject_id && $c->course_id == $student->course->id)
+                                        @if($s->id == $c->subject_id && $c->course_id == \Auth::user()->course->id)
                                             <tr>
                                                 <td>2020-1</td>
                                                 <td>{{$s->name}}</td>

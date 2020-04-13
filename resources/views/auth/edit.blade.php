@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card border shadow-sm margin-top">
                 @if(isset($current) && $current == "student")
                     <div class="card-header">Editar - Aluno</div>
                     <div class="card-body">

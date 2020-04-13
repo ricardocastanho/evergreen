@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card shadow-sm">
+            <div class="card shadow-sm margin-top">
                 <div class="card-header">ADMINISTRADOR</div>
                 <div class="card-body">
                     @if (session('status'))

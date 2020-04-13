@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <main role="main">
-            <div class="card border shadow-sm">
+            <div class="card border shadow-sm margin-top">
                 <div class="card-body">
                     <h5 class="card-title">Acadêmicos</h5>
                     <table class="table table-ordered table-hover">

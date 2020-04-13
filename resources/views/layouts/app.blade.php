@@ -40,7 +40,7 @@
                                 <img src="/storage/{{$student->image}}" class="img-profile-small">
                                 @elseif($current == "teacher")
                                 <img src="/storage/{{$student->image}}" class="img-profile-small">
-                                @else
+                                @elseif($current == "admin")
                                     {{Auth::user()->name}}
                                 @endif
                             </span>

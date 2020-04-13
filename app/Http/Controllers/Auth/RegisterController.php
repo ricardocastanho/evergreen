@@ -69,14 +69,16 @@ class RegisterController extends Controller
     public function createStudent()
     {
         $course = Course::all();
-        $current = "student";
-        return view('auth\register', compact('current', 'course'));
+        $current = "admin";
+        $view = "student";
+        return view('auth\register', compact('current', 'course', 'view'));
     }
 
     public function createTeacher()
     {
-        $current = "teacher";
-        return view('auth\register', compact('current'));
+        $current = "admin";
+        $view = "teacher";
+        return view('auth\register', compact('current', 'view'));
     }
 
     protected function storeStudent(Request $request)

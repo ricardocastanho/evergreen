@@ -5,11 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    @if(isset($current) && $current == "student")
+                    @if(isset($view) && $view == "student")
                         <div class="card-header">Cadastrar - Aluno</div>
                         <div class="card-body">
                             <form method="POST" action="{{ route('adm.store.student') }}">
-                    @elseif(isset($current) && $current == "teacher")
+                    @elseif(isset($view) && $view == "teacher")
                         <div class="card-header">Cadastrar - Professor</div>
                         <div class="card-body">
                             <form method="POST" action="{{ route('adm.store.teacher') }}">
@@ -39,7 +39,7 @@
                         </div>
                     </div>
 
-                    @if(isset($current) && $current == "student")
+                    @if(isset($view) && $view == "student")
                         <div class="form-group row">
                             <label for="course" class="col-md-4 col-form-label text-md-right">Curso</label>
                             <div class="col-md-6">

@@ -32,13 +32,15 @@ class HomeController extends Controller
     public function showStudents()
     {
         $students = Student::all();
-        return view('admin\students_list', compact('students'));
+        $current = "admin";
+        return view('admin\students_list', compact('students', 'current'));
     }
 
     public function showTeachers()
     {
+        $current = "admin";
         $teachers = Teacher::all();
         $subjects = Subjects::all();
-        return view('admin\teachers_list', compact('teachers', 'subjects'));
+        return view('admin\teachers_list', compact('teachers', 'subjects', 'current'));
     }
 }

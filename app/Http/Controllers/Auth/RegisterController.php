@@ -69,16 +69,14 @@ class RegisterController extends Controller
     public function createStudent()
     {
         $course = Course::all();
-        $current = "admin";
         $view = "student";
-        return view('auth\register', compact('current', 'course', 'view'));
+        return view('auth\register', compact('course', 'view'));
     }
 
     public function createTeacher()
     {
-        $current = "admin";
         $view = "teacher";
-        return view('auth\register', compact('current', 'view'));
+        return view('auth\register', compact('view'));
     }
 
     protected function storeStudent(Request $request)
@@ -88,8 +86,7 @@ class RegisterController extends Controller
         $user->email = $request->input('email');
         $user->course_id = $request->input('course_id');
         $user->password = Hash::make($request->input('password'));
-        $test = $request->file('image');
-        if ($test == null || $test == ""){
+        if ($request->file('image') == null || $request->file('image') == ""){
             $user->image = "images/without-img.jpg";
         }else{
             $path = $request->file('image')->store('images', 'public');
@@ -105,6 +102,12 @@ class RegisterController extends Controller
         $user->name = $request->input('name');
         $user->email = $request->input('email');
         $user->password = Hash::make($request->input('password'));
+        if ($request->file('image') == null || $request->file('image') == ""){
+            $user->image = "images/without-img.jpg";
+        }else{
+            $path = $request->file('image')->store('images', 'public');
+            $user->image = $path;
+        }
         $user->save();
         return redirect()->route('adm.teachers.list');
     }

@@ -36,13 +36,7 @@
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             <span class="caret">
-                                @if($current == "student")
-                                <img src="/storage/{{$student->image}}" class="img-profile-small">
-                                @elseif($current == "teacher")
-                                <img src="/storage/{{$student->image}}" class="img-profile-small">
-                                @elseif($current == "admin")
-                                    {{Auth::user()->name}}
-                                @endif
+                                <img src="/storage/{{Auth::user()->image}}" class="img-profile-small">
                             </span>
                         </a>
 

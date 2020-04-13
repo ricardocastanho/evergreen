@@ -11,8 +11,8 @@ class TeacherSeed extends Seeder
      */
     public function run()
     {
-        DB::table('teachers')->insert(['name'=>'Marilei', 'email'=>'marilei@gmail.com', 'password'=>Hash::make('12345678')]);
-        DB::table('teachers')->insert(['name'=>'Everton', 'email'=>'ever@gmail.com', 'password'=>Hash::make('12345678'),]);
-        DB::table('teachers')->insert(['name'=>'Tiago', 'email'=>'tiago@gmail.com', 'password'=>Hash::make('12345678')]);
+        DB::table('teachers')->insert(['name'=>'Marilei', 'email'=>'marilei@gmail.com', 'password'=>Hash::make('12345678'), 'image'=>'images/without-img.jpg']);
+        DB::table('teachers')->insert(['name'=>'Everton', 'email'=>'ever@gmail.com', 'password'=>Hash::make('12345678'), 'image'=>'images/without-img.jpg']);
+        DB::table('teachers')->insert(['name'=>'Tiago', 'email'=>'tiago@gmail.com', 'password'=>Hash::make('12345678'), 'image'=>'images/without-img.jpg']);
     }
 }

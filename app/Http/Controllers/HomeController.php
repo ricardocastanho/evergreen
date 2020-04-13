@@ -25,22 +25,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $current = "admin";
-        return view('admin\home', compact('current'));
+
+        return view('admin\home');
     }
 
     public function showStudents()
     {
         $students = Student::all();
-        $current = "admin";
-        return view('admin\students_list', compact('students', 'current'));
+        return view('admin\students_list', compact('students'));
     }
 
     public function showTeachers()
     {
-        $current = "admin";
         $teachers = Teacher::all();
         $subjects = Subjects::all();
-        return view('admin\teachers_list', compact('teachers', 'subjects', 'current'));
+        return view('admin\teachers_list', compact('teachers', 'subjects'));
     }
 }

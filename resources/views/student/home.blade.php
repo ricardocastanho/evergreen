@@ -7,7 +7,9 @@
 
                 <div class="card shadow-sm margin-top">
                     <div class="card-body">
-                        <h1 class="card-title margin"><img src="/storage/{{$student->image}}" class="img-profile">&nbsp;{{ Auth::user()->name }}</h1>
+                        <h1 class="card-title margin">
+                            <img src="/storage/{{$student->image}}" class="img-profile">&nbsp;{{ Auth::user()->name }}
+                        </h1>
                     </div>
                 </div>
 

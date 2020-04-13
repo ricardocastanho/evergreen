@@ -1,21 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container margin-top">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
                     @if(isset($view) && $view == "student")
                         <div class="card-header">Cadastrar - Aluno</div>
                         <div class="card-body">
-                            <form method="POST" action="{{ route('adm.store.student') }}">
+                            <form method="POST" action="{{ route('adm.store.student') }}" enctype="multipart/form-data">
                     @elseif(isset($view) && $view == "teacher")
                         <div class="card-header">Cadastrar - Professor</div>
                         <div class="card-body">
-                            <form method="POST" action="{{ route('adm.store.teacher') }}">
+                            <form method="POST" action="{{ route('adm.store.teacher') }}" enctype="multipart/form-data">
                     @endif
 
                     @csrf
+
+                    <div class="form-group row">
+                        <label for="name" class="col-md-4 col-form-label text-md-right">
+                            <img src="/storage/images/without-img.jpg" class="img-profile">
+                        </label>
+                        <div class="col-md-6 margin-top3">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="image" name="image">
+                                <label class="custom-file-label" for="image">Escolha uma foto</label>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="form-group row">
                         <label for="name" class="col-md-4 col-form-label text-md-right">Nome</label>

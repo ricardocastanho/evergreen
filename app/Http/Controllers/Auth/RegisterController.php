@@ -88,6 +88,13 @@ class RegisterController extends Controller
         $user->email = $request->input('email');
         $user->course_id = $request->input('course_id');
         $user->password = Hash::make($request->input('password'));
+        $test = $request->file('image');
+        if ($test == null || $test == ""){
+            $user->image = "images/without-img.jpg";
+        }else{
+            $path = $request->file('image')->store('images', 'public');
+            $user->image = $path;
+        }
         $user->save();
         return redirect()->route('adm.students.list');
     }

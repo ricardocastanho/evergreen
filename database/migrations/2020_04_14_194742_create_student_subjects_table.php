@@ -15,9 +15,9 @@ class CreateStudentSubjectsTable extends Migration
     {
         Schema::create('student_subjects', function (Blueprint $table) {
             $table->enum('situation', ['Aprovado', 'Reprovado', 'Pendente'])->nullable()->default('Pendente');
-            $table->integer('av1')->nullable();
-            $table->integer('av2')->nullable();
-            $table->integer('av3')->nullable();
+            $table->decimal('av1', '3', '1')->nullable();
+            $table->decimal('av2', '3', '1')->nullable();
+            $table->decimal('av3', '3', '1')->nullable();
             $table->unsignedBigInteger('student_id');
             $table->unsignedBigInteger('subject_id');
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade')->onUpdate('cascade');

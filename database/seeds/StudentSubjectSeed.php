@@ -11,6 +11,6 @@ class StudentSubjectSeed extends Seeder
      */
     public function run()
     {
-        DB::table('student_subjects')->insert(['av1'=>9, 'av2'=>7, 'av3'=>10, 'student_id'=>1, 'subject_id'=>1]);
+        DB::table('student_subjects')->insert(['av1'=>9.8, 'av2'=>7.4, 'student_id'=>1, 'subject_id'=>1]);
     }
 }

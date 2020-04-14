@@ -45,19 +45,23 @@
                                     <th>Disciplina</th>
                                     <th>Situação</th>
                                     <th>CH</th>
-                                    <th>Notas/Conceito</th>
+                                    <th>AV1</th>
+                                    <th>AV2</th>
+                                    <th>AV3</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($subject as $s)
-                                    @foreach($coursesubject as $c)
-                                        @if($s->id == $c->subject_id && $c->course_id == \Auth::user()->course->id)
+                                    @foreach($studentsubject as $ss)
+                                        @if($s->id == $ss->subject_id && $ss->student_id == \Auth::user()->course->id)
                                             <tr>
-                                                <td>2020-1</td>
+                                                <td>{{$s->schoolyear}}</td>
                                                 <td>{{$s->name}}</td>
-                                                <td>Aprovado</td>
-                                                <td>120</td>
-                                                <td class="text-center">10</td>
+                                                <td>{{$ss->situation}}</td>
+                                                <td>{{$s->workload}}</td>
+                                                <td>{{$ss->av1}}</td>
+                                                <td>{{$ss->av2}}</td>
+                                                <td>{{$ss->av3}}</td>
                                             </tr>
                                         @endif
                                     @endforeach

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\CourseSubject;
 use App\Student;
+use App\StudentSubject;
 use App\Subjects;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,9 +22,9 @@ class StudentController extends Controller
 
     public function index()
     {
-        $coursesubject = CourseSubject::all();
+        $studentsubject = StudentSubject::all();
         $subject = Subjects::all();
         $current = "student";
-        return view('student\home', compact('coursesubject', 'subject', 'current'));
+        return view('student\home', compact('studentsubject', 'subject', 'current'));
     }
 }

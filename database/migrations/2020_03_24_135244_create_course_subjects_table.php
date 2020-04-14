@@ -14,9 +14,9 @@ class CreateCourseSubjectsTable extends Migration
     public function up()
     {
         Schema::create('course_subjects', function (Blueprint $table) {
-                $table->integer('course_id')->unsigned();
+                $table->unsignedBigInteger('course_id');
                 $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade')->onUpdate('cascade');
-                $table->integer('subject_id')->unsigned();
+                $table->unsignedBigInteger('subject_id');
                 $table->foreign('subject_id')->references('id')->on('subjects')->onDelete('cascade')->onUpdate('cascade');
                 $table->softDeletes();
                 $table->timestamps();

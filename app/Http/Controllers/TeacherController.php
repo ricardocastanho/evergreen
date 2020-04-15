@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Course;
 use App\CourseSubject;
 use App\Student;
+use App\StudentSubject;
 use App\Subjects;
 use App\Teacher;
 use Illuminate\Support\Facades\Auth;
@@ -29,10 +30,9 @@ class TeacherController extends Controller
     public function subjectDetails($id)
     {
         $subject = Subjects::find($id);
-        $coursesubject = CourseSubject::all();
-        $course = Course::all();
+        $studentsubject = StudentSubject::all();
         $student = Student::all();
         $current = "teacher";
-        return view('teacher\subject_details', compact('subject', 'coursesubject', 'course', 'student', 'current'));
+        return view('teacher\subject_details', compact('subject', 'studentsubject', 'student', 'current'));
     }
 }

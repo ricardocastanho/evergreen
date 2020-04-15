@@ -18,6 +18,8 @@ class CreateStudentSubjectsTable extends Migration
             $table->decimal('av1', '3', '1')->nullable();
             $table->decimal('av2', '3', '1')->nullable();
             $table->decimal('av3', '3', '1')->nullable();
+            $table->decimal('finalresult', '3', '1')->nullable();
+            $table->integer('faults')->default(0);
             $table->unsignedBigInteger('student_id');
             $table->unsignedBigInteger('subject_id');
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade')->onUpdate('cascade');

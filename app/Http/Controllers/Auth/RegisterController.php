@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Course;
+use App\CourseSubject;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Student;
+use App\StudentSubject;
+use App\Subjects;
 use App\Teacher;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
@@ -81,6 +84,7 @@ class RegisterController extends Controller
 
     protected function storeStudent(Request $request)
     {
+        //save a new student
         $user = new Student();
         $user->name = $request->input('name');
         $user->email = $request->input('email');
@@ -93,6 +97,21 @@ class RegisterController extends Controller
             $user->image = $path;
         }
         $user->save();
+
+        //saving the subjects for new student
+        $course_subject = CourseSubject::all();
+        $subject = Subjects::all();
+        $student = Student::all()->last();
+        foreach ($course_subject as $cs){
+            foreach ($subject as $s){
+                if($s->id == $cs->subject_id && $cs->course_id == $request->input('course_id')){
+                    $student_subject = new StudentSubject();
+                    $student_subject->student_id = $student->id;
+                    $student_subject->subject_id = $s->id;
+                    $student_subject->save();
+                }
+            }
+        }
         return redirect()->route('adm.students.list');
     }
 

@@ -45,23 +45,27 @@
                                     <th>Disciplina</th>
                                     <th>Situação</th>
                                     <th>CH</th>
+                                    <th>Faltas</th>
                                     <th>AV1</th>
                                     <th>AV2</th>
                                     <th>AV3</th>
+                                    <th>Resultado Final</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($subject as $s)
                                     @foreach($studentsubject as $ss)
-                                        @if($s->id == $ss->subject_id && $ss->student_id == \Auth::user()->course->id)
+                                        @if($s->id == $ss->subject_id && $ss->student_id == \Auth::user()->id)
                                             <tr>
                                                 <td>{{$s->schoolyear}}</td>
                                                 <td>{{$s->name}}</td>
                                                 <td>{{$ss->situation}}</td>
                                                 <td>{{$s->workload}}</td>
+                                                <td>{{$ss->faults}}</td>
                                                 <td>{{$ss->av1}}</td>
                                                 <td>{{$ss->av2}}</td>
                                                 <td>{{$ss->av3}}</td>
+                                                <td>{{($ss->av1 + $ss->av2 + $ss->av3)/3}}</td>
                                             </tr>
                                         @endif
                                     @endforeach

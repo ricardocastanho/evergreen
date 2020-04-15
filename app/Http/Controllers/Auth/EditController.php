@@ -44,7 +44,6 @@ class EditController extends Controller
             $student->name = $request->input('name');
             $student->email = $request->input('email');
             $student->course_id = $request->input('course_id');
-            $student->password = Hash::make($request->input('password'));
             $student->save();
         }
         return redirect()->route('adm.students.list');
@@ -56,7 +55,6 @@ class EditController extends Controller
         if (isset($teacher)) {
             $teacher->name = $request->input('name');
             $teacher->email = $request->input('email');
-            $teacher->password = Hash::make($request->input('password'));
             $teacher->save();
         }
         return redirect()->route('adm.teachers.list');

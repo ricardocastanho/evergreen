@@ -28,6 +28,14 @@
                             <a href="{{ route('adm.create.teacher') }}" class="btn btn-light">Cadastrar</a>
                         </div>
                     </div>
+                    <div class="card border">
+                        <div class="card-body">
+                            <h5 class="card-title">Cursos</h5>
+                            <p class="card-text">Todos os cursos</p>
+                            <a href="{{ route('adm.courses.list') }}" class="btn btn-success">Cursos</a>
+                            <a href="" class="btn btn-light">Cadastrar</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

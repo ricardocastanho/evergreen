@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Course;
+use App\CourseSubject;
 use App\Student;
 use App\Subjects;
 use App\Teacher;
@@ -40,5 +42,10 @@ class HomeController extends Controller
         $teachers = Teacher::all();
         $subjects = Subjects::all();
         return view('admin\teachers_list', compact('teachers', 'subjects'));
+    }
+    public function showCourses()
+    {
+        $courses = Course::all();
+            return view('admin\courses_list', compact('courses'));
     }
 }

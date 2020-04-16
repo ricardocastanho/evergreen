@@ -48,6 +48,11 @@
                             </tbody>
                         </table>
                     </div>
+                    <div>
+                        <div class="card-footer">
+                            <a class="btn btn-sm btn-success text-light">Cadastrar nova Matéria</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

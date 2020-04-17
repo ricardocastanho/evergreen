@@ -24,8 +24,12 @@
                                     <td class="text-center">{{\App\CourseSubject::where('course_id', $c->id)->count()}}</td>
                                     <td class="text-center">{{\App\Student::where('course_id', $c->id)->count()}}</td>
                                     <td>
-                                        <a href="{{ route('courses.edit', $c->id) }}" class="btn btn-sm btn-success">Editar</a>
-                                        <a href="" class="btn btn-sm btn-danger">Apagar</a>
+                                        <form method="post" action="{{ route('courses.destroy', $c->id) }}">
+                                            @csrf
+                                            <input type="hidden" name="_method" value="delete">
+                                            <a href="{{ route('courses.edit', $c->id) }}" class="btn btn-sm btn-success">Editar</a>
+                                            <button type="submit" class="btn btn-sm btn-danger">Apagar</button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach

@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">Editar - Curso</div>
                     <div class="card-body">
-                        <form method="PUT" action="{{ route('courses.update', $course->id) }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('courses.update', $course->id) }}" enctype="multipart/form-data">
 
                             @csrf
 
@@ -35,6 +35,7 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
+                                    <input type="hidden" name="_method" value="PUT">
                                     <button type="submit" class="btn btn-success">Cadastrar</button>
                                 </div>
                             </div>

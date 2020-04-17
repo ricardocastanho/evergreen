@@ -83,8 +83,8 @@ class CourseController extends Controller
         $course = Course::find($id);
         if (isset($course)){
             $course->name = $request->input('name');
-            $path = $request->file('image')->store('images', 'public');
-            if($path != $course->image) {
+            if($request->file('image') != null) {
+                $path = $request->file('image')->store('images', 'public');
                 $course->image = $path;
             }
             $course->save();
@@ -100,6 +100,10 @@ class CourseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $course = Course::find($id);
+        if (isset($course)) {
+            $course->delete();
+        }
+        return redirect()->route('courses.index');
     }
 }

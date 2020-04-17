@@ -36,7 +36,7 @@ Route::get('/home/teachers/edit/{id}', 'Auth\EditController@editTeacher');
 Route::post('/home/teachers/{id}', 'Auth\EditController@updateTeacher')->name('adm.update.teacher');
 Route::get('/home/teachers/destroy/{id}', 'Auth\DestroyController@destroyTeacher');
 //Adnin to Course's Routes
-Route::get('/home/courses', 'HomeController@showCourses')->name('adm.courses.list');
+Route::resource('/home/courses', 'CourseController');
 
 //Student's Routes
 Route::get('/student', 'StudentController@index')->name('student.home');

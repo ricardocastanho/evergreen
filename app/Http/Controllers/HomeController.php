@@ -43,9 +43,4 @@ class HomeController extends Controller
         $subjects = Subjects::all();
         return view('admin\teachers_list', compact('teachers', 'subjects'));
     }
-    public function showCourses()
-    {
-        $courses = Course::all();
-            return view('admin\courses_list', compact('courses'));
-    }
 }

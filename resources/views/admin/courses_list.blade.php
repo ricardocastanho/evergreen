@@ -24,7 +24,7 @@
                                     <td class="text-center">{{\App\CourseSubject::where('course_id', $c->id)->count()}}</td>
                                     <td class="text-center">{{\App\Student::where('course_id', $c->id)->count()}}</td>
                                     <td>
-                                        <a href="" class="btn btn-sm btn-success">Editar</a>
+                                        <a href="{{ route('courses.edit', $c->id) }}" class="btn btn-sm btn-success">Editar</a>
                                         <a href="" class="btn btn-sm btn-danger">Apagar</a>
                                     </td>
                                 </tr>
@@ -34,7 +34,7 @@
                 </div>
                 <div>
                     <div class="card-footer">
-                        <a href="" class="btn btn-sm btn-success">Cadastrar novo Curso</a>
+                        <a href="{{ route('courses.create') }}" class="btn btn-sm btn-success">Cadastrar novo Curso</a>
                     </div>
                 </div>
             </div>
